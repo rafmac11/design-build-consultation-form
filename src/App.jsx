@@ -234,7 +234,7 @@ export default function App() {
 
     try {
       const headers = { "Content-Type": "application/json" };
-      if (CONFIG.API_KEY) headers["Authorization"] = `Bearer ${CONFIG.API_KEY}`;
+      if (CONFIG.API_KEY) headers["X-API-Key"] = CONFIG.API_KEY;
 
       const res = await fetch(CONFIG.WEBHOOK_URL, {
         method: "POST",
