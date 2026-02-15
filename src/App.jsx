@@ -221,14 +221,10 @@ export default function App() {
         email: formData.email.trim(),
         phone: formData.phone.trim(),
         zip_code: formData.zip,
-      },
-      meta: {
-        service_interest: serviceLabelMap[formData.service] || formData.service,
-        project_description: formData.projectDescription || null,
+        service: serviceLabelMap[formData.service] || formData.service,
         timeline: formData.timeline || null,
         budget: formData.budget || null,
-        submitted_at: new Date().toISOString(),
-        page_url: window.location.href,
+        message: formData.projectDescription || null,
       },
     };
 
@@ -462,22 +458,22 @@ export default function App() {
                   <label className="form-label">Timeline</label>
                   <select value={formData.timeline} onChange={(e) => update("timeline", e.target.value)} className="form-input form-select" style={{ ...inputBase, cursor: "pointer" }}>
                     <option value="">Select...</option>
-                    <option value="asap">As soon as possible</option>
-                    <option value="1-3months">1–3 months</option>
-                    <option value="3-6months">3–6 months</option>
-                    <option value="6-12months">6–12 months</option>
-                    <option value="planning">Just planning</option>
+                    <option value="As soon as possible">As soon as possible</option>
+                    <option value="1-3 months">1-3 months</option>
+                    <option value="3-6 months">3-6 months</option>
+                    <option value="6-12 months">6-12 months</option>
+                    <option value="Just planning">Just planning</option>
                   </select>
                 </div>
                 <div>
                   <label className="form-label">Budget Range</label>
                   <select value={formData.budget} onChange={(e) => update("budget", e.target.value)} className="form-input form-select" style={{ ...inputBase, cursor: "pointer" }}>
                     <option value="">Select...</option>
-                    <option value="15-25k">$15k – $25k</option>
-                    <option value="25-50k">$25k – $50k</option>
-                    <option value="50-100k">$50k – $100k</option>
-                    <option value="100k+">$100k+</option>
-                    <option value="unsure">Not sure yet</option>
+                    <option value="$15k - $25k">$15k - $25k</option>
+                    <option value="$25k - $50k">$25k - $50k</option>
+                    <option value="$50k - $100k">$50k - $100k</option>
+                    <option value="$100k+">$100k+</option>
+                    <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </div>
               </div>
