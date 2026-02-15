@@ -1,0 +1,6 @@
+# ── CRM Webhook Configuration ─────────────────────────────
+# These are bundled at BUILD TIME by Vite (VITE_ prefix required)
+
+VITE_FORM_ID=your-form-uuid-here
+VITE_WEBHOOK_URL=https://your-crm-webhook-url.com/api/leads
+VITE_API_KEY=your-api-key-here

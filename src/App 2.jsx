@@ -215,7 +215,7 @@ export default function App() {
 
     const payload = {
       form_id: CONFIG.FORM_ID,
-      source: "airtable",
+      source: "website",
       lead: {
         name: `${formData.firstName.trim()} ${formData.lastName.trim()}`,
         email: formData.email.trim(),
